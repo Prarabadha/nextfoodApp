@@ -6,9 +6,8 @@ import CartIcon from "./CartIcon";
 
 const links = [
   { id: 1, title: "HomePage", url: "/" },
-  { id: 2, title: "Menu", url: "/menu" },
-  { id: 3, title: "Working Hours", url: "/" },
-  { id: 4, title: "Contacts", url: "/" },
+  { id: 3, title: "Products", url: "/productlist" },
+  { id: 5, title: "Contacts", url: "/" },
 ];
 
 const Menu = () => {
@@ -42,7 +41,7 @@ const Menu = () => {
               {item.title}
             </Link>
           ))}
-          {!user ? (
+          {/* {!user ? (
             <>
               <Link onClick={() => setOpen(false)} href="/login">
                 Login
@@ -54,9 +53,13 @@ const Menu = () => {
                 Orders
               </Link>
             </>
-          )}
+          )} */}
 
-          <Link href="/cart">
+          <Link
+            href="/cart"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2"
+          >
             <CartIcon />
           </Link>
         </div>

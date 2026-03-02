@@ -1,13 +1,14 @@
-type Product = {
+export type Product = {
   id: number;
   title: string;
   desc?: string;
   img?: string;
   price: number;
   options?: { title: string; additionalPrice: number }[];
+  quantity?: number;
 };
 
-type Products = Product[];
+export type Products = Product[];
 
 export const featuredProducts: Products = [
   {
@@ -201,9 +202,6 @@ export const featuredProducts: Products = [
   },
 ];
 
-
-
-
 export const pizzas: Products = [
   {
     id: 1,
@@ -354,7 +352,6 @@ export const singleProduct: Product = {
     },
   ],
 };
-
 
 type Menu = {
   id: number;
