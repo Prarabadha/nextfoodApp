@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { pizzas } from "@/data";
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
@@ -21,17 +22,20 @@ const ProductListPage = () => {
         {pizzas.map((product) => (
           <div
             key={product.id}
-            className="border rounded-lg p-4 flex flex-col items-center"
+            className="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition"
           >
             {product.img && (
-              <div className="relative w-40 h-40">
+              <Link
+                href={`/product/${product.id}`}
+                className="relative w-40 h-40 block"
+              >
                 <Image
                   src={product.img}
                   alt={product.title}
                   fill
                   className="object-contain"
                 />
-              </div>
+              </Link>
             )}
             <h3 className="mt-2 font-semibold text-center">{product.title}</h3>
             <p className="text-lg font-bold">Rs {product.price}</p>
