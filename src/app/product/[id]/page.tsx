@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import { pizzas } from "@/data";
@@ -9,15 +8,12 @@ import { toast } from "react-toastify";
 
 const ProductDetailPage = () => {
   const router = useRouter();
-  const params = useParams(); // ✅ get params here
+  const params = useParams();
 
   const { addItem } = useCart();
 
   const id = parseInt(params.id as string, 10);
   const product = pizzas.find((p) => p.id === id);
-
-  console.log("Product ID:", params.id);
-  console.log("Found Product:", product);
 
   if (!product) {
     return (

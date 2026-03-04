@@ -2,17 +2,15 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import CartIcon from "./CartIcon";
 
 const links = [
   { id: 1, title: "HomePage", url: "/" },
-  { id: 3, title: "Products", url: "/productlist" },
-  { id: 5, title: "Contacts", url: "/" },
+  { id: 2, title: "Products", url: "/productlist" },
+  { id: 3, title: "Cart", url: "/cart" },
 ];
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
-  const user = false;
   return (
     <div>
       {!open ? (
@@ -41,27 +39,14 @@ const Menu = () => {
               {item.title}
             </Link>
           ))}
-          {/* {!user ? (
-            <>
-              <Link onClick={() => setOpen(false)} href="/login">
-                Login
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link onClick={() => setOpen(false)} href="/order">
-                Orders
-              </Link>
-            </>
-          )} */}
 
-          <Link
+          {/* <Link
             href="/cart"
             onClick={() => setOpen(false)}
             className="flex items-center gap-2"
           >
             <CartIcon />
-          </Link>
+          </Link> */}
         </div>
       )}
     </div>

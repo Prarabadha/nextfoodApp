@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 
@@ -89,10 +88,7 @@ const CartPage = () => {
                 </span>
               </div>
 
-              <button
-                className="w-full mt-6 bg-red-600 text-white py-3 rounded hover:bg-red-700"
-                onClick={() => alert("Proceed to checkout (not implemented)")}
-              >
+              <button className="w-full mt-6 bg-red-600 text-white py-3 rounded hover:bg-red-700">
                 Checkout
               </button>
 

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { featuredProducts } from "@/data";
 import { useCart } from "@/context/CartContext";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const Offer = () => {
   const product = featuredProducts[0];
@@ -78,12 +79,12 @@ const Offer = () => {
             >
               Add Offer to Cart
             </button>
-            <a
+            <Link
               className="inline-block px-5 py-2 border rounded text-red-600 border-red-200 hover:bg-red-50"
-              href="#menu"
+              href="/productlist"
             >
               See Menu
-            </a>
+            </Link>
           </div>
         </div>
 

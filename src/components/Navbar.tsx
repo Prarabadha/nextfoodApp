@@ -7,9 +7,8 @@ const Navbar = () => {
       {/* Left Links */}
 
       <div className="hidden md:flex gap-4 flex-1">
-        <Link href="/">HomePage</Link>
+        <Link href="/">Home</Link>
         <Link href="/productlist">Products</Link>
-        <Link href="/">Contact</Link>
       </div>
 
       {/* Logo */}
