@@ -2,15 +2,23 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const links = [
   { id: 1, title: "HomePage", url: "/" },
   { id: 2, title: "Products", url: "/productlist" },
-  { id: 3, title: "Cart", url: "/cart" },
+  { id: 3, title: "Favorites", url: "/favorites" },
+  { id: 4, title: "Cart", url: "/cart" },
 ];
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const linkClass = (url: string) => {
+    const active = url === "/" ? pathname === "/" : pathname.startsWith(url);
+    return `text-3xl ${active ? "font-bold" : "font-normal"}`;
+  };
+
   return (
     <div>
       {!open ? (
@@ -35,7 +43,12 @@ const Menu = () => {
       {open && (
         <div className="bg-red-500 text-white absolute top-24 left-0 w-full h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center text-3xl z-10">
           {links.map((item) => (
-            <Link onClick={() => setOpen(false)} href={item.url} key={item.id}>
+            <Link
+              onClick={() => setOpen(false)}
+              href={item.url}
+              key={item.id}
+              className={linkClass(item.url)}
+            >
               {item.title}
             </Link>
           ))}

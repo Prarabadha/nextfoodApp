@@ -68,7 +68,7 @@ const Offer = () => {
           <div className="mt-6 flex items-center gap-4">
             <span className="text-2xl font-bold">Rs {product.price}</span>
             <span className="px-2 py-1 bg-red-100 text-red-600 rounded">
-              20% OFF
+              FLAT 20% OFF
             </span>
           </div>
 
@@ -96,7 +96,7 @@ const Offer = () => {
           <div className="mt-6 flex items-center gap-4">
             <span className="text-2xl font-bold">Rs {producttwo.price}</span>
             <span className="px-2 py-1 bg-red-100 text-red-600 rounded">
-              20% OFF
+              FLAT 30% OFF
             </span>
           </div>
 

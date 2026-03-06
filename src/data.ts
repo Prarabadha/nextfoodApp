@@ -19,7 +19,7 @@ export const featuredProducts: Products = [
     title: "Sicilian",
     desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
     img: "/temporary/p1.png",
-    price: 24,
+    price: 124,
     category: "pizza",
     options: [
       {
@@ -41,7 +41,7 @@ export const featuredProducts: Products = [
     title: "Bacon Deluxe",
     desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
     img: "/temporary/p2.png",
-    price: 29,
+    price: 220,
     category: "burger",
     options: [
       {
@@ -63,7 +63,7 @@ export const featuredProducts: Products = [
     title: "Bella Napoli",
     desc: "A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.",
     img: "/temporary/p3.png",
-    price: 24,
+    price: 114,
     category: "pizza",
     options: [
       {
@@ -85,7 +85,7 @@ export const featuredProducts: Products = [
     title: "Spicy Arrabbiata",
     desc: "Ignite your taste buds with this fiery pasta creation, combining penne in a spicy tomato sauce infused with garlic, red chili flakes, and fresh basil for the ultimate comfort food experience.",
     img: "/temporary/p4.png",
-    price: 26,
+    price: 206,
     category: "pasta",
     options: [
       {
@@ -107,7 +107,7 @@ export const featuredProducts: Products = [
     title: "Jalapeño Fiesta",
     desc: "Ignite your taste buds with a fiery kick! This burger features a succulent beef patty, fiery jalapeños, pepper jack cheese, and a zesty chipotle mayo sauce , and all the classic fixings on a toasted bun.",
     img: "/temporary/p5.png",
-    price: 29,
+    price: 288,
     category: "burger",
     options: [
       {
@@ -129,7 +129,7 @@ export const featuredProducts: Products = [
     title: "Margherita Magic",
     desc: "A timeless favorite with a twist, showcasing a thin crust topped with sweet tomatoes, fresh basil, creamy mozzarella, and a drizzle of extra virgin olive oil, fresh arugula, and a drizzle of balsamic glaze.",
     img: "/temporary/p6.png",
-    price: 24,
+    price: 224,
     category: "pizza",
     options: [
       {
@@ -151,7 +151,7 @@ export const featuredProducts: Products = [
     title: "Garlic Parmesan Linguine",
     desc: "A garlic lover's delight, featuring linguine smothered in a creamy Parmesan sauce, infused with garlic and garnished with chopped parsley, bell peppers, and cherry tomatoes.",
     img: "/temporary/p7.png",
-    price: 28,
+    price: 128,
     category: "pasta",
     options: [
       {
@@ -173,7 +173,7 @@ export const featuredProducts: Products = [
     title: "Mediterranean Delight",
     desc: "Embark on a culinary journey with this Mediterranean-inspired creation, featuring zesty feta cheese, Kalamata olives, sun-dried tomatoes, and a sprinkle of oregano.",
     img: "/temporary/p8.png",
-    price: 32,
+    price: 132,
     category: "pizza",
     options: [
       {
@@ -195,7 +195,7 @@ export const featuredProducts: Products = [
     title: "Hawaiian Teriyaki",
     desc: "Experience a taste of the tropics with a juicy beef patty glazed in tangy teriyaki sauce, topped with grilled pineapple, crispy bacon, and fresh lettuce, and all the classic fixings on a toasted bun.",
     img: "/temporary/p9.png",
-    price: 29,
+    price: 129,
     category: "burger",
     options: [
       {
@@ -220,7 +220,7 @@ export const pizzas: Products = [
     title: "Sicilian",
     desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
     img: "/temporary/p1.png",
-    price: 24,
+    price: 204,
     category: "pizza",
     options: [
       {
@@ -242,7 +242,7 @@ export const pizzas: Products = [
     title: "Mediterranean Delight",
     desc: "Embark on a culinary journey with this Mediterranean-inspired creation, featuring zesty feta cheese, Kalamata olives, sun-dried tomatoes, and a sprinkle of oregano.",
     img: "/temporary/p8.png",
-    price: 32,
+    price: 132,
     category: "pizza",
     options: [
       {
@@ -264,7 +264,7 @@ export const pizzas: Products = [
     title: "Bella Napoli",
     desc: "A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.",
     img: "/temporary/p3.png",
-    price: 26,
+    price: 126,
     category: "pizza",
     options: [
       {
@@ -286,7 +286,7 @@ export const pizzas: Products = [
     title: "Pesto Primavera",
     desc: "A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.",
     img: "/temporary/p10.png",
-    price: 28,
+    price: 228,
     category: "pizza",
     options: [
       {
@@ -308,7 +308,7 @@ export const pizzas: Products = [
     title: "Veggie Supreme",
     desc: "A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.",
     img: "/temporary/p11.png",
-    price: 24,
+    price: 124,
     category: "pizza",
     options: [
       {
@@ -330,7 +330,7 @@ export const pizzas: Products = [
     title: "Four Cheese Fantasy",
     desc: "Experience pure cheesy bliss with a melty blend of mozzarella, cheddar, provolone, and Parmesan cheeses, creating a rich and indulgent pizza experience.",
     img: "/temporary/p12.png",
-    price: 22,
+    price: 99,
     category: "pizza",
     options: [
       {
@@ -414,7 +414,7 @@ export const burgers: Products = [
     title: "Bacon Deluxe",
     desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
     img: "/temporary/p2.png",
-    price: 29,
+    price: 129,
     category: "burger",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -427,7 +427,7 @@ export const burgers: Products = [
     title: "Jalapeño Fiesta",
     desc: "Ignite your taste buds with a fiery kick! This burger features a succulent beef patty, fiery jalapeños, pepper jack cheese, and a zesty chipotle mayo sauce, and all the classic fixings on a toasted bun.",
     img: "/temporary/p5.png",
-    price: 28,
+    price: 228,
     category: "burger",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -440,7 +440,7 @@ export const burgers: Products = [
     title: "Hawaiian Teriyaki",
     desc: "Experience a taste of the tropics with a juicy beef patty glazed in tangy teriyaki sauce, topped with grilled pineapple, crispy bacon, and fresh lettuce, and all the classic fixings on a toasted bun.",
     img: "/temporary/p9.png",
-    price: 29,
+    price: 229,
     category: "burger",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -453,7 +453,7 @@ export const burgers: Products = [
     title: "Classic American",
     desc: "A timeless all-American burger with a succulent beef patty, melted American cheese, crispy lettuce, ripe tomato, and savory onions, topped with special sauce on a toasted sesame bun.",
     img: "/temporary/p2.png",
-    price: 22,
+    price: 222,
     category: "burger",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -466,7 +466,7 @@ export const burgers: Products = [
     title: "Mushroom Swiss",
     desc: "Savor the earthy flavors of sautéed mushrooms combined with creamy Swiss cheese, alongside a juicy beef patty and fresh vegetables on a soft brioche bun.",
     img: "/temporary/p2.png",
-    price: 25,
+    price: 220,
     category: "burger",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -479,7 +479,7 @@ export const burgers: Products = [
     title: "Double Stack Delight",
     desc: "Experience double the pleasure with two succulent beef patties, double the cheese, bacon, lettuce, tomato, and a special sauce that brings it all together perfectly.",
     img: "/temporary/p2.png",
-    price: 32,
+    price: 122,
     category: "burger",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -496,7 +496,7 @@ export const pastas: Products = [
     title: "Spicy Arrabbiata",
     desc: "Ignite your taste buds with this fiery pasta creation, combining penne in a spicy tomato sauce infused with garlic, red chili flakes, and fresh basil for the ultimate comfort food experience.",
     img: "/temporary/p4.png",
-    price: 26,
+    price: 126,
     category: "pasta",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -509,7 +509,7 @@ export const pastas: Products = [
     title: "Garlic Parmesan Linguine",
     desc: "A garlic lover's delight, featuring linguine smothered in a creamy Parmesan sauce, infused with garlic and garnished with chopped parsley, bell peppers, and cherry tomatoes.",
     img: "/temporary/p7.png",
-    price: 28,
+    price: 218,
     category: "pasta",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -521,8 +521,8 @@ export const pastas: Products = [
     id: 203,
     title: "Creamy Carbonara",
     desc: "Indulge in this classic Roman pasta featuring fettuccine tossed with a rich egg and cream sauce, crispy pancetta, and a generous sprinkle of Pecorino Romano cheese.",
-    img: "/temporary/p7.png",
-    price: 27,
+    img: "/temporary/pasta2.jpg",
+    price: 127,
     category: "pasta",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -535,7 +535,7 @@ export const pastas: Products = [
     title: "Basil Pesto Tagliatelle",
     desc: "Fresh tagliatelle pasta coated in vibrant homemade basil pesto, topped with toasted pine nuts, cherry tomatoes, fresh mozzarella, and a drizzle of premium olive oil.",
     img: "/temporary/p7.png",
-    price: 29,
+    price: 229,
     category: "pasta",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -547,8 +547,8 @@ export const pastas: Products = [
     id: 205,
     title: "Seafood Marinara",
     desc: "A delightful combination of tender shrimp, mussels, and squid tossed with linguine in a light tomato and white wine sauce, finished with fresh parsley and garlic.",
-    img: "/temporary/p7.png",
-    price: 31,
+    img: "/temporary/pasta3.jpg",
+    price: 131,
     category: "pasta",
     options: [
       { title: "Small", additionalPrice: 0 },
@@ -560,8 +560,8 @@ export const pastas: Products = [
     id: 206,
     title: "Artichoke & Herb Rigoni",
     desc: "Hearty rigatoni pasta mixed with tender artichoke hearts, fresh herbs, roasted garlic, and a touch of cream, topped with Parmesan cheese and fresh breadcrumbs.",
-    img: "/temporary/p7.png",
-    price: 26,
+    img: "/temporary/pasta4.jpg",
+    price: 220,
     category: "pasta",
     options: [
       { title: "Small", additionalPrice: 0 },

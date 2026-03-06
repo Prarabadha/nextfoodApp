@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
+import { FavoritesProvider } from "@/context/FavoritesContext";
 
 export default function RootLayout({
   children,
@@ -17,11 +18,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <CartProvider>
-          <Notification />
-          <Navbar />
-          {children}
-          <Footer />
-          <ToastContainer position="top-right" autoClose={2000} />
+          <FavoritesProvider>
+            <Notification />
+            <Navbar />
+            {children}
+            <Footer />
+            <ToastContainer position="top-right" autoClose={2000} />
+          </FavoritesProvider>
         </CartProvider>
       </body>
     </html>
