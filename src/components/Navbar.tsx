@@ -21,12 +21,10 @@ const Navbar = () => {
         <Link href="/productlist" className={linkClass("/productlist")}>
           Products
         </Link>
-        <Link
-          href="/favorites"
-          className={`${linkClass("/favorites")} flex items-center gap-1`}
-        >
-          <span>❤️</span> Favorites
+        <Link href="/contact" className={linkClass("/contact")}>
+          Contact
         </Link>
+     
       </div>
 
       {/* Logo */}
@@ -41,7 +39,14 @@ const Navbar = () => {
 
       {/* Right Links */}
       <div className="hidden md:flex gap-4 items-center flex-1 justify-end">
+           <Link
+          href="/favorites"
+          className={`${linkClass("/favorites")} flex items-center gap-1`}
+        >
+          <span>❤️</span> Favorites
+        </Link>
         <CartIcon />
+        
       </div>
     </div>
   );
