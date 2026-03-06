@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { pizzas } from "@/data";
+import { pizzas, burgers, pastas } from "@/data";
 import { useCart } from "@/context/CartContext";
 import { toast } from "react-toastify";
 
@@ -13,7 +13,15 @@ const ProductDetailPage = () => {
   const { addItem } = useCart();
 
   const id = parseInt(params.id as string, 10);
-  const product = pizzas.find((p) => p.id === id);
+
+  // Search across all categories
+  let product = pizzas.find((p) => p.id === id);
+  if (!product) {
+    product = burgers.find((p) => p.id === id);
+  }
+  if (!product) {
+    product = pastas.find((p) => p.id === id);
+  }
 
   if (!product) {
     return (
@@ -54,17 +62,30 @@ const ProductDetailPage = () => {
         {/* Details column */}
         <div className="md:w-1/2 flex flex-col justify-between">
           <div>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full capitalize font-semibold">
+                {product.category}
+              </span>
+            </div>
             <h1 className="text-3xl font-bold">{product.title}</h1>
             <p className="mt-4 text-gray-700">{product.desc}</p>
           </div>
 
           <div className="mt-6">
-            <span className="text-2xl font-semibold">Rs {product.price}</span>
+            <span className="text-3xl font-semibold text-red-500">
+              Rs {product.price}
+            </span>
             <button
-              className="ml-4 bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600"
+              className="ml-4 bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 transition"
               onClick={handleAdd}
             >
               Add to Cart
+            </button>
+            <button
+              className="ml-2 border border-red-500 text-red-500 px-6 py-2 rounded hover:bg-red-50 transition"
+              onClick={() => router.push("/productlist")}
+            >
+              Back to Products
             </button>
           </div>
         </div>

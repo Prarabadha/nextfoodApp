@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
+import { useRouter } from "next/navigation";
 
 const CartPage = () => {
+  const router = useRouter();
   const { items, removeItem, clearCart, addItem, decreaseItem } = useCart();
   const totalPrice = items.reduce((acc, i) => acc + i.price * i.quantity, 0);
   return (
@@ -88,7 +90,10 @@ const CartPage = () => {
                 </span>
               </div>
 
-              <button className="w-full mt-6 bg-red-600 text-white py-3 rounded hover:bg-red-700">
+              <button
+                className="w-full mt-6 bg-red-600 text-white py-3 rounded hover:bg-red-700"
+                onClick={() => router.push("/checkout")}
+              >
                 Checkout
               </button>
 
