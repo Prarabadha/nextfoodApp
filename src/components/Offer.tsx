@@ -107,12 +107,12 @@ const Offer = () => {
             >
               Add Offer to Cart
             </button>
-            <a
+            <Link
               className="inline-block px-5 py-2 border rounded text-red-600 border-red-200 hover:bg-red-50"
-              href="#menu"
+              href="/productlist"
             >
               See Menu
-            </a>
+            </Link>
           </div>
         </div>
       </div>
