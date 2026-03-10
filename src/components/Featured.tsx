@@ -3,7 +3,7 @@
 import { featuredProducts } from "@/data";
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import React from "react";
 
 const Featured = () => {
@@ -11,7 +11,8 @@ const Featured = () => {
 
   const handleAdd = (item: (typeof featuredProducts)[number]) => {
     addItem(item);
-    toast.success("Added to cart!");
+    // toast.success("Added to cart!");
+    alert("Added to cart!");
   };
 
   return (

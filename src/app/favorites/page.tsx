@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useFavorites } from "@/context/FavoritesContext";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const FavoritesPage = () => {
   const { favorites, toggleFavorite, isFavorite } = useFavorites();
@@ -38,7 +38,8 @@ const FavoritesPage = () => {
                 className="absolute top-2 right-2 cursor-pointer text-xl"
                 onClick={() => {
                   toggleFavorite(product);
-                  toast.success("Removed from favorites");
+                  // toast.success("Removed from favorites");
+                  alert("Removed from favorites");
                 }}
               >
                 {isFav ? "❤️" : "🤍"}

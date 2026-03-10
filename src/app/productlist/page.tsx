@@ -4,7 +4,7 @@ import { pizzas, getProductsByCategory, Category } from "@/data";
 import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 import { useFavorites } from "@/context/FavoritesContext";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import { useState } from "react";
 import CategoriesSection from "@/components/CategoriesSection";
 
@@ -26,7 +26,8 @@ const ProductListPage = () => {
 
   const handleAdd = (product: (typeof pizzas)[number]) => {
     addItem(product);
-    toast.success("Added to cart!");
+    // toast.success("Added to cart!");
+    alert("Added to cart!");
   };
 
   const renderProduct = (product: (typeof pizzas)[number]) => {
@@ -42,9 +43,10 @@ const ProductListPage = () => {
           className="absolute top-2 right-2 cursor-pointer text-xl"
           onClick={() => {
             toggleFavorite(product);
-            toast.success(
-              isFav ? "Removed from favorites" : "Added to favorites",
-            );
+            // toast.success(
+            //   isFav ? "Removed from favorites" : "Added to favorites",
+            // );
+            alert(isFav ? "Removed from favorites" : "Added to favorites");
           }}
         >
           {isFav ? "❤️" : "🤍"}

@@ -3,13 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
-import { toast } from "react-toastify";
-import dynamic from "next/dynamic";
-
-// Dynamically import the map so it doesn't cause SSR issues
-const MapComponent = dynamic(() => import("@/components/MapComponent"), {
-  ssr: false,
-});
+// import { toast } from "react-toastify";
 
 const CheckoutPage = () => {
   const router = useRouter();
@@ -23,12 +17,6 @@ const CheckoutPage = () => {
   const [cvv, setCvv] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // New state for map coordinates
-  const [coordinates, setCoordinates] = useState<{
-    lat: number;
-    lng: number;
-  } | null>(null);
-
   const isPostalValid = /^\d{6}$/.test(postalCode);
   const isCvvValid = /^\d{3}$/.test(cvv);
   const isCardValid = /^\d{16}$/.test(cardNumber);
@@ -41,8 +29,7 @@ const CheckoutPage = () => {
     isPostalValid &&
     isCardValid &&
     isExpiryValid &&
-    isCvvValid &&
-    coordinates !== null;
+    isCvvValid;
 
   const totalPrice = items.reduce((acc, i) => acc + i.price * i.quantity, 0);
 
@@ -52,15 +39,10 @@ const CheckoutPage = () => {
 
     // Dummy processing
     setTimeout(() => {
-      toast.success("Payment successful! Order placed.");
+      // toast.success("Payment successful! Order placed.");
       clearCart();
       router.push("/");
     }, 1000);
-  };
-
-  const handleLocationSelect = (lat: number, lng: number) => {
-    setCoordinates({ lat, lng });
-    toast.success("Delivery location selected");
   };
 
   if (items.length === 0) {
@@ -83,7 +65,7 @@ const CheckoutPage = () => {
         Complete Your Order
       </h1>
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-1 gap-8 items-center justify-center">
         {/* Left Side: Form */}
         <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
           <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
@@ -322,91 +304,7 @@ const CheckoutPage = () => {
                 "Place Order"
               )}
             </button>
-            {!coordinates && (
-              <p className="text-red-500 text-sm text-center font-medium animate-pulse">
-                Please select your delivery location on the map first.
-              </p>
-            )}
           </form>
-        </div>
-
-        {/* Right Side: Map */}
-        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 lg:sticky lg:top-8 h-full flex flex-col">
-          <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 text-red-500"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-              />
-            </svg>
-            Select Delivery Location
-          </h2>
-          <p className="text-gray-500 text-sm mb-6">
-            Click on the map to pin your exact delivery address.
-          </p>
-
-          <div className="flex-1 w-full relative group rounded-xl overflow-hidden ring-1 ring-gray-200">
-            <MapComponent onLocationSelect={handleLocationSelect} />
-
-            {!coordinates && (
-              <div className="absolute inset-0 bg-black/5 z-[1000] pointer-events-none flex items-center justify-center">
-                <div className="bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full text-gray-800 font-semibold shadow-lg animate-bounce flex items-center gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="w-5 h-5 text-red-500"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Tap map to set location
-                </div>
-              </div>
-            )}
-          </div>
-
-          {coordinates && (
-            <div className="mt-6 bg-green-50 border border-green-200 p-4 rounded-xl flex items-start gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="w-6 h-6 text-green-600 shrink-0 mt-0.5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <div>
-                <h4 className="font-semibold text-green-800">
-                  Location Selected successfully
-                </h4>
-                <p className="text-sm text-green-700 mt-1 font-mono">
-                  Lat: {coordinates.lat.toFixed(4)}, Lng:{" "}
-                  {coordinates.lng.toFixed(4)}
-                </p>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

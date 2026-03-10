@@ -4,7 +4,7 @@ import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import { pizzas, burgers, pastas } from "@/data";
 import { useCart } from "@/context/CartContext";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const ProductDetailPage = () => {
   const router = useRouter();
@@ -39,7 +39,8 @@ const ProductDetailPage = () => {
 
   const handleAdd = () => {
     addItem(product);
-    toast.success("Added to cart!");
+    // toast.success("Added to cart!");
+    alert("Added to cart!");
   };
 
   return (

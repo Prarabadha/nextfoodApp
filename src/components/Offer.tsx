@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { featuredProducts } from "@/data";
 import { useCart } from "@/context/CartContext";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import Link from "next/link";
 
 const Offer = () => {
@@ -14,12 +14,14 @@ const Offer = () => {
 
   const handleAdd = () => {
     addItem(product);
-    toast.success("Added offer to cart!");
+    // toast.success("Added offer to cart!");
+    alert("Added offer to cart!");
   };
 
   const handleAddTwo = () => {
     addItem(producttwo);
-    toast.success("Added offer to cart!");
+    // toast.success("Added offer to cart!");
+    alert("Added offer to cart!");
   };
 
   return (
